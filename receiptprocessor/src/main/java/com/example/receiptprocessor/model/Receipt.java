@@ -9,8 +9,8 @@ import lombok.Data;
 public class Receipt {
     private String id;
     private String retailer;
-    private String purchasedDate;
-    private String purchasedTime;
+    private String purchaseDate;
+    private String purchaseTime;
     private List<Item> items;
     private String total;
 
@@ -21,7 +21,7 @@ public class Receipt {
 
     @Data
     public static class Item {
-        private String description;
+        private String shortDescription;
         private String price;
     }
     

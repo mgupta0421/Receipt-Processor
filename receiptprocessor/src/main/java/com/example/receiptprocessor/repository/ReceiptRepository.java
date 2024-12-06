@@ -9,6 +9,7 @@ import com.example.receiptprocessor.model.Receipt;
 @Repository
 public class ReceiptRepository {
     private final ConcurrentHashMap<String, Receipt> receiptStore = new ConcurrentHashMap<>();
+    private final ConcurrentHashMap<String, Integer> pointStore = new ConcurrentHashMap<>();
 
     public Receipt saveReceipt(Receipt receipt){
         receiptStore.put(receipt.getId(), receipt);
@@ -19,5 +20,12 @@ public class ReceiptRepository {
         return receiptStore.get(id);
     }
 
-    
+    public void savePoints(String id, int points){
+        pointStore.put(id, points);
+
+    }
+
+    public Integer getPoints(String id){
+        return pointStore.get(id);
+    }
 }
