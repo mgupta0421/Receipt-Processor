@@ -23,17 +23,15 @@ This application processes receipts to calculate points based on predefined rule
 - Docker installed on your machine.
 
 ## Steps to Build and Run on Docker
-### 1. Clone the Repository
-Clone the repository to your local machine:
-```bash
-git clone https://github.com/mgupta0421/Receipt-Processor.git
-cd receipt-processor
+**1. Clone the Repository**
+- git clone https://github.com/mgupta0421/Receipt-Processor.git 
+- cd receipt-processor  
 
-### 2. Build the docker file
-docker build -t receipt-processor .
-
-### 3. Run the application
-docker run -p 8080:8080 receipt-processor
+**2. Build the docker file**
+- docker build -t receipt-processor .
+   
+**3. Run the application**
+- docker run -p 8080:8080 receipt-processor
 
 
 
