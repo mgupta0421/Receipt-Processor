@@ -28,6 +28,7 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/mgupta0421/Receipt-Processor.git
 cd receipt-processor
+
 ### 2. Build the docker file
 docker build -t receipt-processor .
 
