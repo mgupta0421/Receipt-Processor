@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.receiptprocessor.model.Receipt;
 import com.example.receiptprocessor.service.ReceiptService;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping("/receipts")
 public class ReceiptController {
@@ -19,12 +21,15 @@ public class ReceiptController {
     public ReceiptController(ReceiptService receiptService){
         this.receiptService = receiptService;
     }
+
+    @ApiOperation("Provide the unique ID of the processed receipt")
     @PostMapping("/process")
     public ResponseEntity<String> processReceipt(@RequestBody Receipt receipt){
         Receipt savedReceipt = receiptService.processReceipt(receipt);
         return ResponseEntity.ok().body("{ \"id\": \"" + savedReceipt.getId() + "\"}");
     }
 
+    @ApiOperation("Retrieve the total points for the provided id")
     @GetMapping("{id}/points")
     public ResponseEntity<String> getPoints(@PathVariable String id){
         int points = receiptService.getPoints(id);

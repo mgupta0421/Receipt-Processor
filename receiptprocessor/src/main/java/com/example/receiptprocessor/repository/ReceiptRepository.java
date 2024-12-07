@@ -22,7 +22,6 @@ public class ReceiptRepository {
 
     public void savePoints(String id, int points){
         pointStore.put(id, points);
-
     }
 
     public Integer getPoints(String id){

@@ -14,17 +14,20 @@ A Spring Boot REST API for processing receipts and calculating reward points bas
 **Steps to run application:**
 This application processes receipts to calculate points based on predefined rules.
 
+1. Clone the repository to your local machine
+2. 'cd receiptprocessor', run this command to navigate to path '/receiptprocessor'.
+3. Run 'mvn clean package spring-boot:run', to start the application
+
+
 ## Prerequisites
 - Docker installed on your machine.
 
-## Steps to Build and Run
-
+## Steps to Build and Run on Docker
 ### 1. Clone the Repository
 Clone the repository to your local machine:
 ```bash
 git clone https://github.com/mgupta0421/Receipt-Processor.git
 cd receipt-processor
-
 ### 2. Build the docker file
 docker build -t receipt-processor .
 
